@@ -11,72 +11,79 @@ packages:
   wpmServer: https://packages.webmethods.io
   wpmRegistry: softwareag
 - name: SIQA_OriginTest_OnPremAssets
+  version: "1.0"
   gitServerName: siqagituser
   gitUrl: https://github.com/vijetadixit
   gitUsername: siqagituser
   gitBranch: Test
 - name: TPP_services_in_FCS
+  version: "1.0"
   gitServerName: SIQA_kvv_wm_io
   gitUrl: https://github.webmethods.io/kvv
   gitUsername: kvv
   gitBranch: main
 services:
-- serviceName: project.siqa_testdevops.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:Database_1
+- serviceName: project.siqa_testdevops.integrations:testFS
   packages:
   - name: SIQA_testDEVOPSProject
     version: "1.0"
-- serviceName: project.siqa_testdevops.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:DBInsert
-  packages:
-  - name: SIQA_testDEVOPSProject
+  - name: TPP_services_in_FCS
     version: "1.0"
-- serviceName: project.siqa_testdevops.integrations:SIQAAdapterFlow
-  packages:
-  - name: SIQA_testDEVOPSProject
+  - name: SIQA_OriginTest_OnPremAssets
     version: "1.0"
-configurationVariables:
-  ? artConnection.SIQA_testDEVOPSProject.project.siqa_testdevops.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.networkProtocol
-  : tcp
-  ? artConnection.SIQA_testDEVOPSProject.project.siqa_testdevops.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.portNumber
-  : "1433"
-  ? artConnection.SIQA_testDEVOPSProject.project.siqa_testdevops.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.transactionType
-  : LOCAL_TRANSACTION
-  ? artConnection.SIQA_testDEVOPSProject.project.siqa_testdevops.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.startupRetryCount
-  : "0"
-  ? artConnection.SIQA_testDEVOPSProject.project.siqa_testdevops.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.poolIncrementSize
-  : "1"
-  ? artConnection.SIQA_testDEVOPSProject.project.siqa_testdevops.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.serverName
-  : vmiboint01
-  ? artConnection.SIQA_testDEVOPSProject.project.siqa_testdevops.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.keyStore
-  : ""
-  ? artConnection.SIQA_testDEVOPSProject.project.siqa_testdevops.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.expireTimeout
-  : "1000"
-  ? artConnection.SIQA_testDEVOPSProject.project.siqa_testdevops.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.password
-  : "{AES}B2Xqma4Ost5nVUiXctJydQ=="
-  ? artConnection.SIQA_testDEVOPSProject.project.siqa_testdevops.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.blockingTimeout
-  : "1000"
-  ? artConnection.SIQA_testDEVOPSProject.project.siqa_testdevops.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.user
-  : sa
-  ? artConnection.SIQA_testDEVOPSProject.project.siqa_testdevops.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.databaseName
-  : SIQACloud
-  ? artConnection.SIQA_testDEVOPSProject.project.siqa_testdevops.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.startupBackoffSecs
-  : "10"
-  ? artConnection.SIQA_testDEVOPSProject.project.siqa_testdevops.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.poolable
-  : "false"
-  ? artConnection.SIQA_testDEVOPSProject.project.siqa_testdevops.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.maximumPoolSize
-  : "10"
-  ? artConnection.SIQA_testDEVOPSProject.project.siqa_testdevops.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.minimumPoolSize
-  : "1"
-  ? artConnection.SIQA_testDEVOPSProject.project.siqa_testdevops.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionEnabled
-  : "false"
-  ? artConnection.SIQA_testDEVOPSProject.project.siqa_testdevops.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.driverType
-  : Progress® DataDirect®
-  ? artConnection.SIQA_testDEVOPSProject.project.siqa_testdevops.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.datasourceClass
-  : com.wm.dd.jdbcx.sqlserver.SQLServerDataSource
-  ? artConnection.SIQA_testDEVOPSProject.project.siqa_testdevops.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.dbType
-  : MSSQL
-  ? artConnection.SIQA_testDEVOPSProject.project.siqa_testdevops.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.trustStore
-  : ""
-  ? artConnection.SIQA_testDEVOPSProject.project.siqa_testdevops.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.otherProperties
-  : loginTimeout=60;driverType=thin;
-  ? artConnection.SIQA_testDEVOPSProject.project.siqa_testdevops.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.heartBeatInterval
-  : "0"
+- serviceName: Basics_1:ComplexFS
+  packages:
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
+- serviceName: Basics_1:Basic_Flow
+  packages:
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
+- serviceName: pub.math:divideInts
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2015
+- serviceName: pub.math:addInts
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2015
+- serviceName: pub.math:subtractInts
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2015
+- serviceName: pub.math:multiplyIntList
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2015
+- serviceName: Basics_1:mapservice
+  packages:
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
+- serviceName: Basics_1:TryCatch
+  packages:
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
+- serviceName: Map_1:TestFlow
+  packages:
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
+- serviceName: REST_1_1.CurrentDateAndTime:_get
+  packages:
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
+- serviceName: pub.date:getCurrentDate
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2015
+- serviceName: pub.string:objectToString
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2015
+- serviceName: pub.flow:debugLog
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2015
+- serviceName: SOAP_1_1:showDateAndTime
+  packages:
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
