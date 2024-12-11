@@ -31,59 +31,11 @@ services:
     version: "1.0"
   - name: SIQA_OriginTest_OnPremAssets
     version: "1.0"
-- serviceName: Basics_1:ComplexFS
+- serviceName: services:add3Ints
   packages:
-  - name: SIQA_OriginTest_OnPremAssets
+  - name: TPP_services_in_FCS
     version: "1.0"
-- serviceName: Basics_1:Basic_Flow
-  packages:
-  - name: SIQA_OriginTest_OnPremAssets
-    version: "1.0"
-- serviceName: pub.math:divideInts
-  packages:
-  - name: WmPublic
-    version: 11.1.0.0.2015
 - serviceName: pub.math:addInts
   packages:
   - name: WmPublic
     version: 11.1.0.0.2015
-- serviceName: pub.math:subtractInts
-  packages:
-  - name: WmPublic
-    version: 11.1.0.0.2015
-- serviceName: pub.math:multiplyIntList
-  packages:
-  - name: WmPublic
-    version: 11.1.0.0.2015
-- serviceName: Basics_1:mapservice
-  packages:
-  - name: SIQA_OriginTest_OnPremAssets
-    version: "1.0"
-- serviceName: Basics_1:TryCatch
-  packages:
-  - name: SIQA_OriginTest_OnPremAssets
-    version: "1.0"
-- serviceName: Map_1:TestFlow
-  packages:
-  - name: SIQA_OriginTest_OnPremAssets
-    version: "1.0"
-- serviceName: REST_1_1.CurrentDateAndTime:_get
-  packages:
-  - name: SIQA_OriginTest_OnPremAssets
-    version: "1.0"
-- serviceName: pub.date:getCurrentDate
-  packages:
-  - name: WmPublic
-    version: 11.1.0.0.2015
-- serviceName: pub.string:objectToString
-  packages:
-  - name: WmPublic
-    version: 11.1.0.0.2015
-- serviceName: pub.flow:debugLog
-  packages:
-  - name: WmPublic
-    version: 11.1.0.0.2015
-- serviceName: SOAP_1_1:showDateAndTime
-  packages:
-  - name: SIQA_OriginTest_OnPremAssets
-    version: "1.0"
